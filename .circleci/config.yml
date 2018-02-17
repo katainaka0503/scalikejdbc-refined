@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/openjdk:8-jdk
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "build.sbt" }}
+      - run: sbt test
+      - save_cache:
+          paths:
+            - ~/.m2
+            - ~/.sbt
+          key: v1-dependencies-{{ checksum "build.sbt" }}
