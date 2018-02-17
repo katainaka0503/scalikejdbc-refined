@@ -11,7 +11,7 @@ import org.scalatest.WordSpec
 import org.scalatest.Matchers._
 import scalikejdbc.TypeBinder
 
-class ScalikejdbcRefinedSupportSpec extends WordSpec with MockFactory{
+class ScalikejdbcRefinedSupportSpec extends WordSpec with MockFactory {
 
   "scalikejdbc-refined" should {
     "defines TypeBinder[Int Refined Positive]" in {
@@ -27,7 +27,8 @@ class ScalikejdbcRefinedSupportSpec extends WordSpec with MockFactory{
       val resultSet = mock[ResultSet]
       (resultSet.getString(_: Int)) expects 1 returning "prefixandsuffix"
 
-      val result = implicitly[TypeBinder[String Refined StartsWith[W.`"prefix"`.T]]].apply(resultSet, 1)
+      val result =
+        implicitly[TypeBinder[String Refined StartsWith[W.`"prefix"`.T]]].apply(resultSet, 1)
 
       result.value shouldBe "prefixandsuffix"
     }
