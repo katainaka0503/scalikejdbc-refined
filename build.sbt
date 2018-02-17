@@ -21,3 +21,5 @@ scalacOptions ++= Seq(
   "-Ywarn-numeric-widen",
   "-Xfuture"
 )
+
+addCommandAlias("ci-check", "; clean; scalafmtCheck; test:scalafmtCheck; test")
