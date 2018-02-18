@@ -15,7 +15,7 @@ import scalikejdbc.{ParameterBinderFactory, TypeBinder}
 class ScalikejdbcRefinedSupportSpec extends WordSpec with MockFactory {
 
   "scalikejdbc-refined" should {
-    "defines TypeBinder[Int Refined Positive]" in {
+    "define TypeBinder[Int Refined Positive]" in {
       val resultSet = mock[ResultSet]
       (resultSet.getObject(_: Int)) expects 1 returning new Integer(1)
 
@@ -24,7 +24,7 @@ class ScalikejdbcRefinedSupportSpec extends WordSpec with MockFactory {
       result.value shouldBe 1
     }
 
-    "defines TypeBinder[String Refined StartsWith]" in {
+    """define TypeBinder[String Refined StartsWith["prefix"]]""" in {
       val resultSet = mock[ResultSet]
       (resultSet.getString(_: Int)) expects 1 returning "prefixandsuffix"
 
