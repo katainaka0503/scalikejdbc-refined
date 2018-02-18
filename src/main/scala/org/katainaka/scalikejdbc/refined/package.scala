@@ -1,4 +1,4 @@
-package com.github.katainaka0503.scalikejdbc
+package org.katainaka.scalikejdbc
 
 import eu.timepit.refined.api.{Refined, Validate}
 import scalikejdbc.TypeBinder

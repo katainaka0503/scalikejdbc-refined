@@ -1,4 +1,4 @@
-package com.github.katainaka0503.scalikejdbc.refined
+package org.katainaka.scalikejdbc.refined
 
 import java.sql.ResultSet
 
