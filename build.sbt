@@ -8,6 +8,8 @@ libraryDependencies ++= Seq(
   "org.scalikejdbc" %% "scalikejdbc" % "3.2.1",
   "eu.timepit" %% "refined" % "0.8.7",
   "org.scalatest" %% "scalatest" % "3.0.5" % Test,
+  "org.scalikejdbc" %% "scalikejdbc-test" % "3.2.1" % Test,
+  "com.h2database"  %  "h2" % "1.4.196" % Test,
   "org.scalamock" %% "scalamock" % "4.0.0" % Test
 )
 
