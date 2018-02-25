@@ -38,7 +38,7 @@ class UsersSpec extends fixture.FlatSpec with Matchers with BeforeAndAfterAll wi
     maybeFound.isDefined should be(true)
   }
   it should "find by where clauses" in { implicit session =>
-    val maybeFound = Users.findBy(sqls.eq(u.id, 1L))
+    val maybeFound = Users.findBy(sqls.eq(u.name, "testuser"))
     maybeFound.isDefined should be(true)
   }
   it should "find all records" in { implicit session =>
@@ -50,11 +50,11 @@ class UsersSpec extends fixture.FlatSpec with Matchers with BeforeAndAfterAll wi
     count should be > (0L)
   }
   it should "find all by where clauses" in { implicit session =>
-    val results = Users.findAllBy(sqls.eq(u.id, 1L))
+    val results = Users.findAllBy(sqls.eq(u.name, "testuser"))
     results.size should be > (0)
   }
   it should "count by where clauses" in { implicit session =>
-    val count = Users.countBy(sqls.eq(u.id, 1L))
+    val count = Users.countBy(sqls.eq(u.name, "testuser"))
     count should be > (0L)
   }
   it should "create new record" in { implicit session =>
