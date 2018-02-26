@@ -1,4 +1,4 @@
-package org.katainaka.scalikejdbc
+package jp.katainaka.scalikejdbc
 
 import eu.timepit.refined._
 import eu.timepit.refined.api.{RefType, Refined, Validate}
