@@ -1,10 +1,10 @@
-package org.katainaka.scalikejdbc.refined.example
+package jp.katainaka.scalikejdbc.refined.example
 
 import eu.timepit.refined.api.Refined
 import eu.timepit.refined.collection.NonEmpty
 import eu.timepit.refined.numeric.Positive
 import scalikejdbc._
-import org.katainaka.scalikejdbc.refined._
+import jp.katainaka.scalikejdbc.refined._
 
 case class Users(id: Long, name: String Refined NonEmpty, age: Int Refined Positive) {
 

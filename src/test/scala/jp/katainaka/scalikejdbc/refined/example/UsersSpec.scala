@@ -1,10 +1,10 @@
-package org.katainaka.scalikejdbc.refined.example
+package jp.katainaka.scalikejdbc.refined.example
 
 import eu.timepit.refined.auto._
 import org.scalatest._
 import scalikejdbc._
 import scalikejdbc.scalatest.AutoRollback
-import org.katainaka.scalikejdbc.refined._
+import jp.katainaka.scalikejdbc.refined._
 
 class UsersSpec extends fixture.FlatSpec with Matchers with BeforeAndAfterAll with AutoRollback {
 

@@ -1,4 +1,4 @@
-package org.katainaka.scalikejdbc.refined
+package jp.katainaka.scalikejdbc.refined
 
 import java.sql.{PreparedStatement, ResultSet}
 
